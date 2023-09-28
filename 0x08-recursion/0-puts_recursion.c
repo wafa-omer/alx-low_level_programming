@@ -2,8 +2,9 @@
 
 /**
  * main - check the code
- *
- * Return: Always 0.
+ * _puts_recursion function prints s string followed by new line
+ * @s pointer to the string 
+ * Return: void
  */
 
 void _puts_recursion(char *s)
