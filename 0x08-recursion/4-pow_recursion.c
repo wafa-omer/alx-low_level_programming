@@ -3,8 +3,9 @@
 /**
  * _pow_recursion - search a string for any of a set of bytes.
  * @x: base
- * @y:exposant
- * return: pointer to the byte in a 
+ * @y: exposant
+ * Return : pointer to the byte in a
+ * Return: On success 1
  * or NULL if no such byte is found
  */
 
