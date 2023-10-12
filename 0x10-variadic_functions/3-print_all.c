@@ -6,10 +6,12 @@
  * @ap: argument pointer
  */
 
-void format_char(char *separator , va_list ap)
+void format_char(char *separator, va_list ap)
 {
-	printf("%S%c", separator . va_arg(ap , int));
+	printf("%S%c", separator, va_arg(ap, char));
 }
+
+
 /**
  * format_int - format integer
  * @separator: the srting separator
@@ -18,9 +20,9 @@ void format_char(char *separator , va_list ap)
 
 
 
-void format_int(char *separator , va_list ap)
+void format_int(char *separator, va_list ap)
 {
-	printf("%s%d", separator , va_arg(ap , int));
+	printf("%s%d", separator, va_arg(ap, int));
 }
 
 /**
@@ -28,9 +30,9 @@ void format_int(char *separator , va_list ap)
  * @separator: the string separator
  * @ap: argument pointeer
  */
-void format_float(char *separator , va_list ap)
+void format_float(char *separator, va_list ap)
 {
-	printf("%s%f" , separator , va_arg(ap , double));
+	printf("%s%f" , separator, va_arg(ap, double));
 }
 
 
@@ -39,13 +41,13 @@ void format_float(char *separator , va_list ap)
  *@separator: the string separator
  *@ap: arguments pointer
  */
-void format_string(char *separator , va_list ap)
+void format_string(char *separator, va_list ap)
 {
 	char *str = va_arg(ap, char *);
 	switch ((int) (!str))
 	case 1:
 		str = "(nil";
-		printf("%s%s" , separator , str);
+		printf("%s%s" , separator, str);
 }
 
 /**
@@ -87,4 +89,3 @@ va_start(ap, format);
 printf("\n");
 va_end(ap);
 }
-
